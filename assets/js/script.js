@@ -1,6 +1,6 @@
 
 const calcButton = document.querySelector("form > div:last-child > button:first-child");
-let usrNameSurname; let usrKm; let usrAge;
+let usrNameSurname; let usrKm; let usrAge; let finalPrice;
 
 calcButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -19,9 +19,15 @@ calcButton.addEventListener("click", (e) => {
         // Stampo i risultati delle variabili
         console.log("usrNameSurname: " + usrNameSurname + " | usrKm: " + usrKm + " | usrAge: " + usrAge);
 
+        finalPrice = (usrKm * 0.21).toFixed(2);
+
+        if (usrAge == "Minorenne") {
+            finalPrice *= 0.8.toFixed(2);
+        } else if (usrAge == "Over 65") {
+            finalPrice *= 0.6.toFixed(2);
+        }
+
+        console.log(finalPrice);
     }
-
-
-
 
 });
