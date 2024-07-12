@@ -15,22 +15,22 @@
         
         <div class="container-fluid bg-primary p-3 d-flex flex-column justify-content-center" style="height:100vh;">
             <h1 class="text-center text-white fw-bold"> CALCOLA IL PREZZO DEL TUO BIGLIETTO </h1>
-            <div class="container rounded bg-white p-3 mt-4">
+            <div class="container rounded bg-white p-3 mt-4 shadow-lg pb-0 pt-5">
                 <form action="">  
                     <div class="row justify-content-around m-auto">
-                        <div class="col-3 border-1 border d-flex flex-column p-3 rounded-4">
+                        <div class="col-3 border-1 border d-flex flex-column p-3 rounded-4 shadow">
                             <p class="text-center">Nome Cognome</p>
                             <div class="m-auto">
                                 <input type="text" class="border border-1 rounded-2" id="usr_name_lastname">
                             </div>
                         </div>
-                        <div class="col-3 border-1 border d-flex flex-column p-3 rounded-4">
+                        <div class="col-3 border-1 border d-flex flex-column p-3 rounded-4 shadow">
                             <p class="text-center">KM da percorrere</p>
                             <div class="m-auto">
                                 <input type="number" class="border border-1 rounded-2" id="usr_km">
                             </div>
                         </div>
-                        <div class="col-3 border-1 border d-flex flex-column p-3 rounded-4">
+                        <div class="col-3 border-1 border d-flex flex-column p-3 rounded-4 shadow">
                             <p class="text-center">Fascia d'età</p>
                             <div class="m-auto">
                                 <select class="form-select" id="usr_age_range">
@@ -41,9 +41,9 @@
                             </div>
                         </div>
                     </div>
-                    <div style="max-width:max-content;" class="m-auto my-3"> 
-                        <button type="submit" class="rounded-3 p-2 px-3 mx-2">Calcola Prezzo</button>
-                        <button class="rounded-3 p-2 px-3 mx-2">Annulla</button>
+                    <div style="max-width:max-content;" class="m-auto my-5"> 
+                        <button type="submit" class="rounded-3 p-2 px-3 mx-2 shadow bg-primary text-white">Calcola Prezzo</button>
+                        <button class="rounded-3 p-2 px-3 mx-2 shadow bg-primary text-white">Annulla</button>
                     </div>
                 </form>
             </div>
@@ -54,11 +54,11 @@
                 <div class="row rounded-2 border border-1 border-black text-black">
                     <div class="col-3 bg-secondary p-2">
                         <p class="fw-bold fs-4 m-0">NOME PASSEGGERO</p>
-                        <p class="fw-bold fs-6"></p>
+                        <p class="fw-bold fs-6"><span id="passeggero"></span></p>
                     </div>
                     <div class="col-2 py-2 px-4">
                         <p class="fw-bold fs-5">Offerta</p>
-                        <p class="fs-5">Test</p>
+                        <p class="fs-5">Biglietto <span id="tariffa"></span></p>
                     </div>
                     <div class="col-2 py-2 px-4">
                         <p class="fw-bold fs-5">Carrozza</p>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col-3 py-2 px-4">
                         <p class="fw-bold fs-5">Costo biglietto</p>
-                        <p class="fs-5">costo</p>
+                        <p class="fs-5"><span id="costo"></span> €</p>
                     </div>
                 </div>
             </div>
